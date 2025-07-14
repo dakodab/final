@@ -1,0 +1,191 @@
+@import url("styles/layout.css");
+
+:root {
+  --accent-pink: #ff007f;
+}
+
+
+/* === INTRO HEADER STYLES === */
+
+.section-intro {
+  background: white;
+  color: black;
+  padding: 6rem 1rem 4rem;
+}
+
+
+.subhead {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* === FONT SYSTEM === */
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #111;
+  background: #fff;
+  letter-spacing: 0.01em;
+}
+
+/* UIkit elements use Barlow */
+p, .uk-text-lead, .uk-container, .uk-section, .uk-button {
+  font-family: 'Barlow', sans-serif;
+  color: #111;
+}
+
+h1, h2, h3, .uk-heading-small, .uk-heading-medium, .uk-heading-large {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #111;
+}
+
+
+/* COVER */
+.headline-container {
+  width: 50%;
+  padding-left: 7%;
+  padding-right: 0;
+  padding-top: 4rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+.headline {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem); /* responsive size */
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* END OF COVER */
+
+
+
+::selection {
+  background: var(--accent-pink);
+  color: white;
+}
+
+/* === QUOTE BLOCK STYLES === */
+blockquote {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #111;
+  max-width: 700px;
+  margin: 4rem auto;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+  border-left: 4px solid var(--accent-pink);
+}
+
+blockquote::before {
+  content: open-quote;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  color: var(--accent-pink);
+}
+blockquote::after {
+  content: close-quote;
+  font-size: 4rem;
+  line-height: 0;
+  position: absolute;
+  right: -1rem;
+  bottom: -0.5rem;
+  color: var(--accent-pink);
+}
+
+/* FIX FOR FOOTER INSIDE QUOTE */
+.uk-blockquote footer {
+  all: unset; /* Reset styles */
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #666;
+  text-align: right;
+  font-style: normal;
+}
+/* adding more spacing */
+.section-article {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.section-article p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 1.5rem auto;
+}
+
+.section-article h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #111;
+}
+
+/* === FULL-BLEED LAYOUT === */
+.full-bleed {
+  margin: 0;
+  padding: 0;
+}
+
+.full-bleed img,
+.full-bleed video,
+.full-bleed iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.full-bleed img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* === D3 CHART CONTAINER STYLES === */
+.chart-container {
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.chart-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* for click-thru interactives */
+.hidden {
+  display: none;
+}
+
+/* Adjust font sizes via media query */
+@media (max-width: 600px) {
+  #barChart text {
+    font-size: 10px;
+  }
+}
+

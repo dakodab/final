@@ -1,0 +1,81 @@
+<!-- used to be in clinic-waits.html -->
+     <!-- Comparison Chart 
+     <div id="comparisonChart" class="hidden">
+      <h2>Wait Times Across the UK</h2> -->
+
+      <!-- to make comparison chart mobile friendly
+       <div id="chart-wrapper" style="overflow-x: auto;">
+        <svg id="barChart"
+             viewBox="0 0 800 600"
+             preserveAspectRatio="xMinYMin meet"
+             style="width: 100%; height: auto; min-width: 300px;">
+        </svg>
+      </div>
+    </div>  -->
+
+
+<!-- used to be in clinic-waits.js-->
+<!-- 
+// When "Compare" button is clicked...
+document.getElementById("compareBtn").onclick = () => {
+  chart.classList.remove("hidden"); // Show comparison chart section
+  renderComparisonChart(data); // Generate and display bar chart with D3
+};
+
+// Function to draw D3 bar chart comparing wait times across clinics
+function renderComparisonChart(clinicWaitTimes) {
+  const svg = d3.select("#barChart"); // Select SVG element
+  
+  const svgNode = svg.node();
+  const width = svgNode.getBoundingClientRect().width;
+  const height = svgNode.getBoundingClientRect().height || 600; // fallback      
+  
+
+  const margin = { top: 20, right: 20, bottom: 100, left: 50 }; // Set chart margins
+
+  // X-axis = QUANTITATIVE - months (length of the bar)
+    const x = d3.scaleLinear()
+    .domain([0, d3.max(clinicWaitTimes, d => d.months)])
+    .nice()
+    .range([margin.left, width - margin.right]);
+
+ // Y-axis = CATEGORICAL - cities (name)
+    const y = d3.scaleBand()
+    .domain(clinicWaitTimes.map(d => d.city))
+    .range([margin.top, height - margin.bottom])
+    .padding(0.2); // more space between rows
+
+  svg.selectAll("*").remove(); // Clear any existing chart content
+
+ // Draw bars
+ svg.append("g")
+    .selectAll("rect")
+    .data(clinicWaitTimes)
+    .join("rect")
+    .attr("y", d => y(d.city))                     // vertical position by city
+    .attr("x", x(0))                               // bars start at 0 on x-axis
+    .attr("width", d => x(d.months) - x(0))        // bar length = value
+    .attr("height", y.bandwidth())                 // full vertical space of row
+    .attr("fill", "var(--accent-pink)");           // Colour of bars to match hot pink in style.css
+
+
+// Add X-axis - bottom - months
+svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x))
+
+// Add X-axis label
+svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", height - 40)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .style("fill", "#333")
+    .text("months");
+
+ // Add Y-axis - left - cities
+ svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y));
+}
+     -->
