@@ -57,9 +57,11 @@
 
             <!-- Social Icons - DONT FORGET TO ADD URL -->
             <div class="uk-iconnav">
+                
                 <!-- Copy link to clipboard -->
                 <a 
-                    href="#" 
+                    id="copy-link" 
+                    href="javascript:void(0)" 
                     class="uk-icon-link" 
                     uk-icon="link"
                     aria-label="Copy link to clipboard">
@@ -74,14 +76,6 @@
                     aria-label="Share via email">
                 </a>
                 
-                <!-- Instagram (maybe?) -->
-                <a 
-                    href="" 
-                    class="uk-icon-link" 
-                    uk-icon="instagram"
-                    aria-label="Share via Instagram">
-                </a>
-                
                 <!-- Bluesky -->
                 <a 
                     id="share-bluesky"
@@ -92,6 +86,28 @@
                     rel="noopener noreferrer"
                     aria-label="Share via Bluesky">
                 </a>
+
+                <!-- X -->
+                <a 
+                    id="share-x"
+                    href="javascript:void(0)" 
+                    class="uk-icon-link" 
+                    uk-icon="x" 
+                    target="_blank"  
+                    rel="noopener noreferrer"
+                    aria-label="Share via X">
+                </a>           
+                
+                <!-- LinkedIn -->
+                <a 
+                    id="share-linkedin"
+                    href="javascript:void(0)" 
+                    class="uk-icon-link" 
+                    uk-icon="linkedin" 
+                    target="_blank"  
+                    rel="noopener noreferrer"
+                    aria-label="Share via LinkedIn">
+                </a>      
 
             </div> <!-- END of Social Icons -->
         </div> <!-- END OF BYLINE + SOCIAL ICONS -->
@@ -331,19 +347,47 @@
 <script>
     const currentUrl = encodeURIComponent(window.location.href);
   
-    // Update Bluesky link
+    // Bluesky button (event listener: if button, then create bluesky post)
     const blueskyLink = document.getElementById("share-bluesky");
     if (blueskyLink) {
       const blueskyText = encodeURIComponent("Check out this article on anti-trans bias in perinatal health:");
       blueskyLink.href = `https://bsky.app/intent/compose?text=${blueskyText}%20${currentUrl}`;
     }
   
-    // Update email link
+    // Email button (event listener: if button, then create email)
     const emailLink = document.getElementById("share-email");
     if (emailLink) {
       const subject = encodeURIComponent("Anti-Trans Bias in Perinatal Health");
       const body = encodeURIComponent("Check out this article: ") + currentUrl;
       emailLink.href = `mailto:?subject=${subject}&body=${body}`;
+    }
+
+    // X button (event listener: if button, then create X post)
+    const xLink = document.getElementById("share-x");
+    if (xLink) {
+      const xText = encodeURIComponent("Check out this article on anti-trans bias in perinatal health:");
+      xLink.href = `https://twitter.com/intent/tweet?text=${xText}%20${currentUrl}`;
+    }
+
+    // LinkedIn button (event listener: if button, then create linkedin post)
+    const linkedinLink = document.getElementById("share-linkedin");
+    if (linkedinLink) {
+      linkedinLink.href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
+    }
+  
+    // Link button (event listener: if/then, alert or error)
+    const copyBtn = document.getElementById("copy-link");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => UIkit.notification({
+                message: 'Link copied to clipboard!',
+                status: 'primary',
+                pos: 'top-right',
+                timeout: 2000,
+                }))
+          .catch(err => console.error("Failed to copy: ", err));
+      });
     }
   </script>
   
