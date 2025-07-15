@@ -143,27 +143,6 @@ blockquote::after {
   color: #111;
 }
 
-/* === FULL-BLEED LAYOUT === */
-.full-bleed {
-  margin: 0;
-  padding: 0;
-}
-
-.full-bleed img,
-.full-bleed video,
-.full-bleed iframe {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.full-bleed img {
-  width: 100vw;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 /* === D3 CHART CONTAINER STYLES === */
 .chart-container {
   max-width: 100%;

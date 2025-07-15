@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   renderChart01("#chart-container");
 
+  // SOCIAL SHARE LOGIC
   const currentUrl = encodeURIComponent(window.location.href);
   
   // Bluesky button (event listener: if button, then create bluesky post)

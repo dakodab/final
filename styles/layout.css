@@ -1,11 +1,4 @@
 /* === LAYOUT WRAPPERS === */
-
-/* Full-bleed sections */
-.full-bleed {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-}
   
 /* Centered section w/ large spacing */
 .section {
@@ -39,4 +32,25 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* === FULL-BLEED LAYOUT === */
+.full-bleed {
+  margin: 0;
+  padding: 0;
+}
+
+.full-bleed img,
+.full-bleed video,
+.full-bleed iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.full-bleed img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
