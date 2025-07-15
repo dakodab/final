@@ -195,3 +195,7 @@ html, body {
   background-color: #828282; /* darker gray */
   transition: width 0.2s ease-out;
 }
+
+a {
+  color: var(--accent-pink);
+}
