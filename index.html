@@ -22,7 +22,13 @@
 </head>
 
 <body>
-    <!-- COVER -->
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+  
+  <!-- COVER -->
     <div class="uk-cover-container uk-height-viewport" style="width: 100vw; overflow-x: hidden;">
 
         <img src="assets/images/placeholder-01-belly.png" 
@@ -340,57 +346,10 @@
 
 <!-- D3.js Library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
+
 <!-- import script.js -->
 <script type="module" src="script.js"></script>
 
-<!-- SOCIAL MEDIA ICONS USE ACTUAL LINK -->
-<script>
-    const currentUrl = encodeURIComponent(window.location.href);
-  
-    // Bluesky button (event listener: if button, then create bluesky post)
-    const blueskyLink = document.getElementById("share-bluesky");
-    if (blueskyLink) {
-      const blueskyText = encodeURIComponent("Check out this article on anti-trans bias in perinatal health:");
-      blueskyLink.href = `https://bsky.app/intent/compose?text=${blueskyText}%20${currentUrl}`;
-    }
-  
-    // Email button (event listener: if button, then create email)
-    const emailLink = document.getElementById("share-email");
-    if (emailLink) {
-      const subject = encodeURIComponent("Anti-Trans Bias in Perinatal Health");
-      const body = encodeURIComponent("Check out this article: ") + currentUrl;
-      emailLink.href = `mailto:?subject=${subject}&body=${body}`;
-    }
-
-    // X button (event listener: if button, then create X post)
-    const xLink = document.getElementById("share-x");
-    if (xLink) {
-      const xText = encodeURIComponent("Check out this article on anti-trans bias in perinatal health:");
-      xLink.href = `https://twitter.com/intent/tweet?text=${xText}%20${currentUrl}`;
-    }
-
-    // LinkedIn button (event listener: if button, then create linkedin post)
-    const linkedinLink = document.getElementById("share-linkedin");
-    if (linkedinLink) {
-      linkedinLink.href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
-    }
-  
-    // Link button (event listener: if/then, alert or error)
-    const copyBtn = document.getElementById("copy-link");
-    if (copyBtn) {
-      copyBtn.addEventListener("click", () => {
-        navigator.clipboard.writeText(window.location.href)
-          .then(() => UIkit.notification({
-                message: 'Link copied to clipboard!',
-                status: 'primary',
-                pos: 'top-right',
-                timeout: 2000,
-                }))
-          .catch(err => console.error("Failed to copy: ", err));
-      });
-    }
-  </script>
-  
   </body>
   </html>
 
