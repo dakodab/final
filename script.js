@@ -1,3 +1,7 @@
+
+// import Chart01 code //
+import { renderChart01 } from "./charts/chart-01.js";
+
 // Render chart
 document.addEventListener("DOMContentLoaded", () => {
   renderChart01("#chart-container");
