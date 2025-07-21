@@ -443,55 +443,6 @@
             <div id="chart-container" class="chart-container uk-margin-medium-top"></div>
           </div>
         </section> <!-- End of Data Viz 01 -->
-
-        <!-- Clinic Wait Times - Interactive Content Section-->
-        <section id="clinic-wait-times" class="uk-section">
-            <div class="uk-container uk-container-small">
-
-                <div class="uk-card uk-card-default uk-card-body uk-margin">
-
-                    <!-- mainQuestion that stays visible above interactive -->
-                    <div id="mainQuestion" class="uk-margin-bottom">
-                        <h2 class="uk-text-lead uk-text-bold">
-                        How long does the average adult referred to a gender identity clinic wait to actually be seen?
-                        </h2>
-                    </div> <!-- end of mainQuestion -->
-                
-                    <!-- start interactive container -->
-                    <div id="interactiveContainer01">
-                
-                        <script>
-                            // STEP 1: Fetch interactive HTML content from a separate file // 
-                            fetch("interactives/clinic-waits.html")
-
-                            // STEP 2: Convert the response to the fetch into raw HTML text//
-                            .then(res => res.text())
-
-                            // STEP 3: Inject the raw HTML into the page as live DOM elements (makes buttons live, etc.)  //
-                            .then(html => {
-                                document.getElementById("interactiveContainer01").innerHTML = html;
-                        
-                            // STEP 4: Now that HTML is in DOM, load related JS script
-                            const script = document.createElement("script");
-
-                            // script source //
-                            script.src = "interactives/clinic-waits.js";
-
-                            // STEP 5: IMPORTANT - AFTER script is loaded, THEN run the init function //
-                            script.onload = () => initClinicWaitTimesInteractive();
-
-                            // Add script to page to trigger loading //
-                            document.body.appendChild(script);
-                            });
-                        </script>
-
-                    </div> <!-- end of div interactiveContainer01 -->
-
-                </div> <!-- end of uk-card -->
-
-            </div> <!-- end of uk-container -->
-
-        </section> <!-- End of uk-section Clinic Wait Times -->
     
 
 
