@@ -29,7 +29,7 @@ function initClinicWaitTimesInteractive() {
           city: "Exeter",
           months: 99,
           yearsFormatted: "8.3 years",
-          comment: "This is the worst known wait time at any clinic in the UK."
+          comment: ""
         },
         {
           city: "Glasgow",
@@ -41,7 +41,7 @@ function initClinicWaitTimesInteractive() {
           city: "Inverness",
           months: 9,
           yearsFormatted: "0.8 years",
-          comment: "Congratulations! Highland Gender Identity Service in Inverness has the shortest wait time of any clinic in the country - you will only wait an average of 9 months for your first appointment."
+          comment: ""
         },
         {
           city: "East of England",
