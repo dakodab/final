@@ -203,17 +203,39 @@ function initClinicWaitTimesInteractive() {
       // Create Leaflet map centered on UK
       const map = L.map('map').setView([54.5, -3], 5);
 
-      // Add OpenStreetMap tiles
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
+      // Add OpenStreetMap tiles - and style
+      L.tileLayer('https://api.maptiler.com/maps/dataviz-light/{z}/{x}/{y}.png?key=AtaIYBARB7WJwYLzPoVv', {
+        attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> contributors',
+        tileSize: 512,
+        zoomOffset: -1
       }).addTo(map);
+
+      // marker styling with svg
+      const pinkIcon = L.icon({
+        iconUrl: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 48" width="32" height="48">
+            <path fill="#ff007f" stroke="black" stroke-width="1" d="M16 0C7.2 0 0 7.2 0 16c0 11.2 16 32 16 32s16-20.8 16-32C32 7.2 24.8 0 16 0zM16 22c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+          </svg>
+        `),
+        iconSize: [32, 48],
+        iconAnchor: [16, 48],
+        popupAnchor: [0, -40]
+      });
 
       // Add a marker for each clinic
       data.forEach(clinic => {
         if (clinic.lat && clinic.lng) {
-          const marker = L.marker([clinic.lat, clinic.lng]).addTo(map);
+          const marker = L.marker([clinic.lat, clinic.lng], { icon: pinkIcon }).addTo(map);
           marker.bindPopup(clinic.clinicName);
-          marker.on('click', () => showWaitTime(clinic));
+          marker.on('click', () => {
+            map.flyTo([clinic.lat, clinic.lng], 7, {
+              duration: 0.8
+            });
+          
+            setTimeout(() => {
+              showWaitTime(clinic);
+            }, 850); // allow time for animation to play before switching
+          });
         }
       });
 
@@ -221,8 +243,8 @@ function initClinicWaitTimesInteractive() {
   
     // Function to show wait time info for selected location/clinic //
     function showWaitTime(clinic) {
-        selector.classList.add("hidden"); // Hide location selector
-        results.classList.remove("hidden"); // Show the results section
+      selector.classList.add("hidden"); // Hide location selector
+      results.classList.remove("hidden"); // Show the results section
     
         const months = clinic.months; // months - from array
         const yearsFormatted = clinic.yearsFormatted; // years - from array

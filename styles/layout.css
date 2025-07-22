@@ -54,3 +54,15 @@
   display: block;
   object-fit: cover;
 }
+
+/* fade from map to results */
+#locationSelector,
+#results {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.hidden {
+  display: block; /* let it animate first, then hide later */
+  opacity: 0;
+  pointer-events: none;
+}
