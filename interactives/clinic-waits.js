@@ -10,7 +10,7 @@ function initClinicWaitTimesInteractive() {
           lng: -2.119140, 
           clinicName: "Grampian Gender Identity Clinic",
           clinicLink: "https://www.ngicns.scot.nhs.uk/public/gender-identity-clinics/",
-          comment: ""
+          comment: "The average wait time for adults referred to Grampian Gender Identity Clinic is 39 months."
         },
 
         {
@@ -22,7 +22,7 @@ function initClinicWaitTimesInteractive() {
           lng: -6.032643, 
           clinicName: "Brackenburn Clinic Gender Identity Service",
           clinicLink: "https://belfasttrust.hscni.net/service/brackenburn-clinic/",          
-          comment: ""
+          comment: "The average wait time for adults referred to Brackenburn Clinic Gender Identity Service is 85 months."
         },
         {
           city: "Cardiff",
@@ -33,7 +33,7 @@ function initClinicWaitTimesInteractive() {
           lng: -3.190537, 
           clinicName: "Welsh Gender Service",
           clinicLink: "https://cavuhb.nhs.wales/our-services/welsh-gender-service/",
-          comment: ""
+          comment: "The average wait time for adults referred to Welsh Gender Service is 20 months."
         },
         {
           city: "Edinburgh",
@@ -44,7 +44,7 @@ function initClinicWaitTimesInteractive() {
           lng: -3.197393, 
           clinicName: "The Edinburgh Chalmers Gender Identity Clinic",
           clinicLink: "https://www.lothiansexualhealth.scot/gender-identity-clinic/",
-          comment: ""
+          comment: "The average wait time for adults referred to The Edinburgh Chalmers Gender Identity Clinic is 15 months."
         },
         {
           city: "Exeter",
@@ -55,7 +55,7 @@ function initClinicWaitTimesInteractive() {
           lng: -3.525765, 
           clinicName: "Devon Partnership NHS Trust West of England Specialist Gender Identity Clinic",
           clinicLink: "http://www.dpt.nhs.uk/The-Laurels.372.0.html",
-          comment: ""
+          comment: "The average wait time for adults referred to Devon Partnership NHS Trust West of England Specialist Gender Identity Clinic is 99 months."
         },
         {
           city: "Glasgow",
@@ -66,7 +66,7 @@ function initClinicWaitTimesInteractive() {
           lng: -4.278733, 
           clinicName: "The Sandyford NHS Gender Identity Clinic",
           clinicLink: "https://www.sandyford.scot/sexual-health-services/gender-identity-service/",
-          comment: ""
+          comment: "The average wait time for adults referred to The Sandyford NHS Gender Identity Clinic is 71 months."
         },
         {
           city: "Inverness",
@@ -77,7 +77,7 @@ function initClinicWaitTimesInteractive() {
           lng: -4.231571, 
           clinicName: "Highland Gender Identity Service",
           clinicLink: "https://highlandsexualhealth.co.uk/gender-identity",
-          comment: ""
+          comment: "The average wait time for adults referred to Highland Gender Identity Service is 9 months."
         },
         {
           city: "East of England",
@@ -88,7 +88,7 @@ function initClinicWaitTimesInteractive() {
           lng: -1.143785, 
           clinicName: "East of England Gender Service",
           clinicLink: "https://ncth.nhs.uk/east-of-england-service",
-          comment: "There is no data on how lng you will have to wait at this particular clinic. Wait times at other clinics in the UK range from 9 months to over 8 years."
+          comment: "There is no data on how long you will have to wait at this particular clinic. Wait times at other clinics in the UK range from 9 months to over 8 years."
         },
         {
           city: "Leeds",
@@ -99,7 +99,7 @@ function initClinicWaitTimesInteractive() {
           lng: -1.471491, 
           clinicName: "Leeds and York Partnership NHS Foundation Trust Gender Identity Service",
           clinicLink: "https://www.leedsandyorkpft.nhs.uk/our-services/gender-identity-service/",
-          comment: ""
+          comment: "The average wait time for adults referred to Leeds and York Partnership NHS Foundation Trust Gender Identity Service is 64 months."
         },
         {
           city: "London",
@@ -110,7 +110,7 @@ function initClinicWaitTimesInteractive() {
           lng: -0.175418, 
           clinicName: "The Tavistock and Portman NHS Foundation Trust: Gender Identity Clinic for Adults",
           clinicLink: "https://gic.nhs.uk/",
-          comment: ""
+          comment: "The average wait time for adults referred to The Tavistock and Portman NHS Foundation Trust: Gender Identity Clinic for Adults is 79 months."
         },
         {
           city: "Manchester",
@@ -121,7 +121,7 @@ function initClinicWaitTimesInteractive() {
           lng: -2.133972, 
           clinicName: "Indigo Gender Service",
           clinicLink: "https://indigogenderservice.uk/",
-          comment: ""
+          comment: "The average wait time for adults referred to Indigo Gender Service is 22 months."
         },
         {
           city: "Merseyside",
@@ -132,7 +132,7 @@ function initClinicWaitTimesInteractive() {
           lng: -2.9837689, 
           clinicName: "Transcend",
           clinicLink: "https://www.merseycare.nhs.uk/our-services/halton/transcend",
-          comment: "There is no data on how lng you will have to wait at this particular clinic. Wait times at other clinics in the UK range from 9 months to over 8 years."
+          comment: "There is no data on how long you will have to wait at this particular clinic. Wait times at other clinics in the UK range from 9 months to over 8 years."
         },
         {
           city: "Newcastle",
@@ -143,7 +143,7 @@ function initClinicWaitTimesInteractive() {
           lng: -1.633115, 
           clinicName: "Northumberland, Tyne and Wear NHS Foundation Trust Northern Region Gender Dysphoria Service",
           clinicLink: "https://www.cntw.nhs.uk/services/northern-region-gender-dysphoria-service-specialist-service-walkergate-park/",
-          comment: ""
+          comment: "The average wait time for adults referred to Northumberland, Tyne and Wear NHS Foundation Trust Northern Region Gender Dysphoria Service is 75 months."
         },
         {
           city: "Northamptonshire",
@@ -154,7 +154,7 @@ function initClinicWaitTimesInteractive() {
           lng: -1.160851, 
           clinicName: "Northamptonshire Healthcare NHS Foundation Trust Gender Identity Clinic",
           clinicLink: "https://www.nhft.nhs.uk/gic",
-          comment: ""
+          comment: "The average wait time for adults referred to Northamptonshire Healthcare NHS Foundation Trust Gender Identity Clinic is 63 months."
         },
         {
           city: "Nottinghamshire",
@@ -165,7 +165,7 @@ function initClinicWaitTimesInteractive() {
           lng: -1.143785, 
           clinicName: "Nottinghamshire Healthcare NHS Foundation Trust The Nottingham Centre for Transgender Health",
           clinicLink: "https://ncth.nhs.uk/",
-          comment: ""
+          comment: "The average wait time for adults referred to Nottinghamshire Healthcare NHS Foundation Trust The Nottingham Centre for Transgender Health is 26 months."
         },
         {
           city: "Sheffield",
@@ -176,7 +176,7 @@ function initClinicWaitTimesInteractive() {
           lng: -1.497603, 
           clinicName: "Sheffield Health and Social Care NHS Foundation Trust Gender Identity Service",
           clinicLink: "https://www.shsc.nhs.uk/services/gender-identity-clinic",
-          comment: ""
+          comment: "The average wait time for adults referred to Sheffield Health and Social Care NHS Foundation Trust Gender Identity Service is 65 months."
         },
         {
           city: "Sussex",
@@ -187,7 +187,7 @@ function initClinicWaitTimesInteractive() {
           lng: -0.135094, 
           clinicName: "Sussex Gender Service",
           clinicLink: "https://www.sussexpartnership.nhs.uk/our-services/specialist-services/sussex-gender-service",
-          comment: ""
+          comment: "The average wait time for adults referred to Sussex Gender Service is 40 months."
         }
       ];
   
@@ -233,6 +233,7 @@ function initClinicWaitTimesInteractive() {
         if (clinic.lat && clinic.lng) {
           const marker = L.marker([clinic.lat, clinic.lng], { icon: pinkIcon }).addTo(map);
           marker.bindPopup(clinic.clinicName);
+          marker.on('mouseover', () => marker.openPopup());
           marker.on('click', () => {
             map.flyTo([clinic.lat, clinic.lng], 7, {
               duration: 0.8
