@@ -200,8 +200,14 @@ function initClinicWaitTimesInteractive() {
       intro.classList.add("hidden"); // Hide the intro/start section
       selector.classList.remove("hidden"); // Show the location selector section
   
-      // Create Leaflet map centered on UK
-      const map = L.map('map').setView([54.5, -3], 5);
+      // Create Leaflet map centered on UK AND LIMITED TO UK
+      const map = L.map('map', {
+        minZoom: 5,
+        maxBounds: [
+          [48, -12], // southwest corner
+          [61, 5]    // northeast corner
+        ]
+      }).setView([54.5, -3], 5);
 
       // Add OpenStreetMap tiles - and style
       L.tileLayer('https://api.maptiler.com/maps/dataviz-light/{z}/{x}/{y}.png?key=AtaIYBARB7WJwYLzPoVv', {
