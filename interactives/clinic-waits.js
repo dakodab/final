@@ -1,4 +1,5 @@
-// Only run AFTER interactive has been inserted into DOM
+let map; // global
+
 function initClinicWaitTimesInteractive() {
     const data = [
         {
@@ -201,11 +202,11 @@ function initClinicWaitTimesInteractive() {
       selector.classList.remove("hidden"); // Show the location selector section
   
       // Create Leaflet map centered on UK AND LIMITED TO UK
-      const map = L.map('map', {
+      map = L.map('map', {
         minZoom: 5,
         maxBounds: [
-          [48, -12], // southwest corner
-          [61, 5]    // northeast corner
+          [48, -12],
+          [61, 5]
         ]
       }).setView([54.5, -3], 5);
 
@@ -275,13 +276,10 @@ function initClinicWaitTimesInteractive() {
 
         //show back button //
         document.getElementById("backBtn").onclick = () => {
-            results.classList.add("hidden");          // Hide results section
-            selector.classList.remove("hidden");      // Show location selector again
-          };
-          map.setView([54.5, -3], 5); // Reset view on return (center UK, zoom level)
-          
-
-
+          results.classList.add("hidden");          // Hide results section
+          selector.classList.remove("hidden");      // Show location selector again
+          map.setView([54.5, -3], 5);               // Reset map view to original center/zoom
+        };
       
     } // end of function to show wait time
   
