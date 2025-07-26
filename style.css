@@ -250,3 +250,6 @@ a {
   margin-top: 0.5rem;
   line-height: 1.4;
 }
+#headline-slideshow .uk-slider-items li {
+  padding: 0 1rem; /* Adds space left & right */
+}
