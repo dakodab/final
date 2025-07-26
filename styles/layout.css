@@ -66,8 +66,3 @@
   opacity: 0;
   pointer-events: none;
 }
-
-.uk-slideshow-items img {
-  object-fit: contain;
-  max-height: 60vh;
-}
