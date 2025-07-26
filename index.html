@@ -22,9 +22,9 @@
     <link 
         rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/uikit@3.21.1/dist/css/uikit.min.css" />
-    <script 
+    <script
         src="https://cdn.jsdelivr.net/npm/uikit@3.21.1/dist/js/uikit.min.js"></script>
-    <script 
+    <script
         src="https://cdn.jsdelivr.net/npm/uikit@3.21.1/dist/js/uikit-icons.min.js"></script>
         
     <!-- main custom CSS (imports layout.css) -->
@@ -169,13 +169,24 @@
                 </p>
             </div> <!-- end of uk-container -->
         </section> <!-- END OF ARTICLE SECTION 01 -->
-
-        <section id="article-section-01" class="uk-section section-article">
-            <div class="uk-container uk-container-small">
-
-            </div>
-        </section>
         
+        <section id="headline-slideshow">
+            <div class="uk-position-relative" tabindex="-1" uk-slider>
+
+                <ul class="uk-slider-items">
+                    <li><img src="assets/images/headlines/breastfeeding-charity-trustee.png" alt=""></li>
+                    <li><img src="assets/images/headlines/founder-of-breastfeeding-charity-quits.png" alt=""></li>
+                    <li><img src="assets/images/headlines/i-was-ousted.png" alt=""></li>
+                </ul>
+
+                <!-- Caption under slideshow -->
+                <i><p class="headline-caption">Slideshow: 2024 U.K. news articles on breastfeeding support groups</p></i>
+
+                <!-- Arrows -->
+                <a class="uk-position-center-left" href="#" uk-slider-item="previous">❮</a>
+                <a class="uk-position-center-right" href="#" uk-slider-item="next">❯</a>
+            </div>
+        </section> <!-- END OF HEADLINE SLIDESHOW -->
 
 
         <section id="article-section-02" class="uk-section section-article">
