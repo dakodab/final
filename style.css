@@ -253,3 +253,14 @@ a {
 #headline-slideshow .uk-slider-items li {
   padding: 0 1rem; /* Adds space left & right */
 }
+
+
+.uk-icon {
+  vertical-align: text-top;
+}
+
+.tooltip-inline {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.15em;
+}
