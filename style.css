@@ -262,7 +262,40 @@ a {
 
 #resources .uk-accordion-title {
   font-weight: 700;             /* bold */
-  color: var(--accent-pink);    /* your signature pink variable */
+  color: var(--accent-pink);   
 }
 
 
+.caption-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+.caption-overlay p { 
+  color: #fff; 
+  margin: 0;            /* optional: tighter bar */
+}
+.caption-overlay a { 
+  color: #fff; 
+  text-decoration: underline; 
+}
+/* Shrink down the contained images */
+.image-contained .uk-container {
+  max-width: 600px;   /* adjust to taste: 500px, 600px, etc. */
+  margin: 0 auto;     /* keep centered */
+}
+
+/* Reduce the section padding for these */
+.image-contained.uk-section {
+  padding-top: 2rem;   /* default UIkit is ~4rem */
+  padding-bottom: 0rem;
+}
+
+/* Optional: trim caption padding to tighten further */
+.image-contained .caption-overlay {
+  padding: 0.5rem 1rem;
+}
+
+/* Extra shrink just for the Janet Russek image */
+.image-small .uk-container {
+  max-width: 400px;   /* make it much smaller */
+}
