@@ -2,6 +2,9 @@
 
 An interactive multimedia journalism project exploring anti-trans bias in perinatal spaces in the U.K. Combines longform narrative, smooth scrolling transitions, interactive mapping, data visualisation, and multimedia design.
 
+## Live Demo
+[View the project here](https://dakodab.github.io/final/)
+
 ## Features
 - Responsive storytelling layout
 - Scroll-driven interactivity and transitions
