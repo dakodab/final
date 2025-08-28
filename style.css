@@ -262,7 +262,77 @@ a {
 
 #resources .uk-accordion-title {
   font-weight: 700;             /* bold */
-  color: var(--accent-pink);    /* your signature pink variable */
+  color: var(--accent-pink);   
 }
 
 
+.caption-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+.caption-overlay p { 
+  color: #fff; 
+  margin: 0;            /* optional: tighter bar */
+  font-size: 0.8rem;  /* default ~0.875rem, so this is ~10% smaller */
+  line-height: 1.3;   /* keeps it readable */
+}
+.caption-overlay a { 
+  color: #fff; 
+  text-decoration: underline; 
+}
+/* Shrink down the contained images */
+.image-contained .uk-container {
+  max-width: 600px;   /* adjust to taste: 500px, 600px, etc. */
+  margin: 0 auto;     /* keep centered */
+}
+
+/* Reduce the section padding for these */
+.image-contained.uk-section {
+  padding-top: 2rem;   /* default UIkit is ~4rem */
+  padding-bottom: 0rem;
+}
+
+/* Optional: trim caption padding to tighten further */
+.image-contained .caption-overlay {
+  padding: 0.5rem 1rem;
+}
+
+/* Extra shrink just for the Janet Russek image */
+.image-small .uk-container {
+  max-width: 400px;   /* make it much smaller */
+}
+
+/* Float the Janet Russek image to the right with text wrap */
+.float-figure {
+  float: right;
+  width: 380px;         /* tune to taste */
+  max-width: 45%;       /* don’t get too wide on large screens */
+  margin: 0 0 2rem 2rem;/* space from text */
+}
+.float-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Keep the hover caption tight on the floated figure */
+.float-figure .caption-overlay {
+  padding: 0.5rem 0.75rem;
+}
+
+/* Clear the float at the end of the section if needed */
+#article-section-03-B .uk-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* On small screens, drop the float and go full width */
+@media (max-width: 960px) {
+  .float-figure {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
